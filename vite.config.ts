@@ -5,6 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: "/mormo.github.io/", // 👈 required for GitHub Pages when using project repo
   server: {
     host: "::",
     port: 8080,
