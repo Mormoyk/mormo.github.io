@@ -69,7 +69,12 @@ const Header = () => {
 
           {/* Social Links */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors duration-200">
+            <a 
+              href="https://github.com/Mormoyk" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-400 hover:text-purple-400 transition-colors duration-200"
+            >
               <Github size={20} />
             </a>
             <a 

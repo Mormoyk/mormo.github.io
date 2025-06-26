@@ -81,7 +81,9 @@ const Contact = () => {
               <h4 className="text-white font-semibold mb-4">Follow Me</h4>
               <div className="flex gap-4">
                 <a
-                  href="#"
+                  href="https://github.com/Mormoyk"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 bg-gradient-to-r from-gray-700 to-gray-600 rounded-lg flex items-center justify-center hover:from-purple-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-110"
                 >
                   <Github className="text-white" size={20} />

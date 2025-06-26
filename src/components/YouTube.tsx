@@ -1,47 +1,28 @@
 
-import { Play, Users, Eye, ThumbsUp, Calendar } from 'lucide-react';
+import { Play } from 'lucide-react';
 
 const YouTube = () => {
   const videos = [
     {
       title: "Understanding Quantum Computing: From Theory to Practice",
-      views: "45K",
-      likes: "2.1K",
       duration: "24:15",
-      thumbnail: "quantum-computing",
-      uploadDate: "2 weeks ago"
+      thumbnail: "quantum-computing"
     },
     {
       title: "Building AI Applications with Modern Frameworks",
-      views: "32K",
-      likes: "1.8K",
       duration: "18:42",
-      thumbnail: "ai-frameworks",
-      uploadDate: "1 month ago"
+      thumbnail: "ai-frameworks"
     },
     {
       title: "Deep Dive into Blockchain Technology",
-      views: "28K",
-      likes: "1.5K",
       duration: "31:20",
-      thumbnail: "blockchain-tech",
-      uploadDate: "1 month ago"
+      thumbnail: "blockchain-tech"
     },
     {
       title: "Machine Learning Best Practices and Tips",
-      views: "52K",
-      likes: "2.7K",
       duration: "15:30",
-      thumbnail: "ml-tips",
-      uploadDate: "2 months ago"
+      thumbnail: "ml-tips"
     }
-  ];
-
-  const stats = [
-    { label: "Subscribers", value: "25.4K", icon: <Users size={24} /> },
-    { label: "Total Views", value: "1.2M", icon: <Eye size={24} /> },
-    { label: "Videos", value: "120+", icon: <Play size={24} /> },
-    { label: "Likes", value: "85K", icon: <ThumbsUp size={24} /> }
   ];
 
   return (
@@ -54,22 +35,6 @@ const YouTube = () => {
           <p className="text-gray-400 text-lg max-w-3xl mx-auto">
             Sharing knowledge and insights about cutting-edge technology, research, and development.
           </p>
-        </div>
-
-        {/* Channel Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="text-center p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 transform hover:scale-105"
-            >
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-purple-700 rounded-lg flex items-center justify-center mx-auto mb-3">
-                {stat.icon}
-              </div>
-              <div className="text-2xl font-bold text-purple-400 mb-1">{stat.value}</div>
-              <div className="text-sm text-gray-400">{stat.label}</div>
-            </div>
-          ))}
         </div>
 
         {/* Latest Videos */}
@@ -97,22 +62,6 @@ const YouTube = () => {
                   <h4 className="text-white font-semibold mb-2 text-sm leading-tight group-hover:text-purple-300 transition-colors">
                     {video.title}
                   </h4>
-                  
-                  <div className="flex items-center justify-between text-xs text-gray-400 mb-2">
-                    <span className="flex items-center gap-1">
-                      <Eye size={12} />
-                      {video.views} views
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <ThumbsUp size={12} />
-                      {video.likes}
-                    </span>
-                  </div>
-                  
-                  <div className="flex items-center text-xs text-gray-500">
-                    <Calendar size={12} className="mr-1" />
-                    {video.uploadDate}
-                  </div>
                 </div>
               </div>
             ))}
@@ -126,13 +75,23 @@ const YouTube = () => {
             Join our community of learners and stay updated with the latest in technology, research, and innovation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="px-8 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+            <a
+              href="https://www.youtube.com/@MuntasirMormo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+            >
               <Play size={20} />
               Subscribe on YouTube
-            </button>
-            <button className="px-8 py-3 border border-purple-500 text-purple-300 rounded-lg hover:bg-purple-500/10 transition-all duration-300">
+            </a>
+            <a
+              href="https://www.youtube.com/@MuntasirMormo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 border border-purple-500 text-purple-300 rounded-lg hover:bg-purple-500/10 transition-all duration-300"
+            >
               View All Videos
-            </button>
+            </a>
           </div>
         </div>
       </div>
