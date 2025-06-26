@@ -1,5 +1,5 @@
 
-import { Mail, MapPin, Phone, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
 import { useState } from 'react';
 
 const Contact = () => {
@@ -12,8 +12,22 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission logic here
+    
+    // Create mailto link with form data
+    const mailtoLink = `mailto:fsmormo@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    )}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -47,17 +61,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-semibold">Email</h4>
-                  <p className="text-gray-400">muntasir.mormo@email.com</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-gray-800/50 to-gray-700/30 rounded-lg border border-purple-500/20">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-purple-700 rounded-lg flex items-center justify-center">
-                  <Phone className="text-white" size={20} />
-                </div>
-                <div>
-                  <h4 className="text-white font-semibold">Phone</h4>
-                  <p className="text-gray-400">+1 (555) 123-4567</p>
+                  <p className="text-gray-400">fsmormo@gmail.com</p>
                 </div>
               </div>
 
@@ -67,7 +71,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-semibold">Location</h4>
-                  <p className="text-gray-400">Available Worldwide</p>
+                  <p className="text-gray-400">Dhaka-1216, Bangladesh</p>
                 </div>
               </div>
             </div>
