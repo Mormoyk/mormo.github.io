@@ -72,7 +72,12 @@ const Header = () => {
             <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors duration-200">
               <Github size={20} />
             </a>
-            <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors duration-200">
+            <a 
+              href="https://www.linkedin.com/in/muntasir-mormo/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-400 hover:text-purple-400 transition-colors duration-200"
+            >
               <Linkedin size={20} />
             </a>
             <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors duration-200">

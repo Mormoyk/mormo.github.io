@@ -87,7 +87,9 @@ const Contact = () => {
                   <Github className="text-white" size={20} />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/muntasir-mormo/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 bg-gradient-to-r from-gray-700 to-gray-600 rounded-lg flex items-center justify-center hover:from-purple-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-110"
                 >
                   <Linkedin className="text-white" size={20} />
